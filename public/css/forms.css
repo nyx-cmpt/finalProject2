@@ -7,22 +7,65 @@
 .form-control textarea {
   display: block;
   width: 100%;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
+  min-height: 30px;
+  margin-bottom: 1%;
+  border-radius: 10px;
 }
 
 .form-control input,
 .form-control textarea {
   border: 1px solid #a1a1a1;
   font: inherit;
-  border-radius: 2px;
+  padding: 5px;
+  
 }
 
 .form-control input:focus,
 .form-control textarea:focus {
-  outline-color: #00695c;
+  outline-color:black;
+  font-size: 16px;
+  font-style:initial;
 }
 
 .form-control input.invalid,
 .form-control textarea.invalid {
   border-color: red;
+}
+.btn{
+  margin-top: 7%;
+  border-radius: 10px;
+}
+.centered{
+  margin-top: 4%;
+  position: relative;
+  font-size: 30px;
+  font-style: oblique;
+  font-family:initial;
+}
+
+
+/*div kaam*/
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 50px;
+}
+body{
+  background-color: #e6e6e6;
+}
+.logo{
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  color:#00695c;
+}
+.line{
+  background-color:#c7c7c7;
+  min-height: 1px;
+  border-radius: 20%;
+  margin-top: 8px;
 }
