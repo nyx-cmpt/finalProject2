@@ -1,15 +1,18 @@
 <%- include('../includes/head.ejs') %>
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
    <%- include('../includes/navigation.ejs') %>
 
-    <main>
+    <main class="card">
        <% if(errMessage){%>
                 <div class = "user-message user-message--error"><%=errMessage%></div>
                 <%}%>
+                <div class="logo"><i class="fas fa-user-cog"></i></div>
+                <div class="line"></div>
         <form class="login-form" action="/reset" method="POST">
             <div class="form-control">
                 <label for="email">E-Mail</label>
