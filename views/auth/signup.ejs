@@ -1,15 +1,20 @@
 <%- include('../includes/head.ejs') %>
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+    crossorigin="anonymous">
 </head>
 
-<body>
+<body class="SIGNUP">
    <%- include('../includes/navigation.ejs') %>
    <% if(errMessage){%>
     <div class = "user-message user-message--error"><%=errMessage%></div>
     <%}%>
    <input type="hidden" name ="_csrf" value ="<%=csrfToken%>"></input>
-    <main>
+    <main class="card">
+        <div class="logo"><i class="fas fa-shopping-bag"></i></div>
+        <div class="line"></div>
         <form class="login-form" action="/signup" method="POST" noValidate>
             <div class="form-control">
                 <label for="email">E-Mail</label>
@@ -25,7 +30,7 @@
                 <input type="password" name="confirmPassword" id="confirmPassword" value="<%= oldInput.confirmPassword %>">
             </div>
             <input type="hidden" name ="_csrf" value ="<%= csrfToken %>">
-            <button class="btn" type="submit">Signup</button>
+            <button class="btn" type="submit">SignUp</button>
         </form>
     </main>
 <%- include('../includes/end.ejs') %>
